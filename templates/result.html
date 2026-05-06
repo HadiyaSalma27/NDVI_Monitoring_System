@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>NDVI Result</title>
+
+<link rel="stylesheet" href="/static/style.css">
+
+<style>
+
+body{
+
+margin:0;
+
+font-family:Arial, Helvetica, sans-serif;
+
+background:#0b1220;
+
+color:white;
+
+display:flex;
+
+flex-direction:column;
+
+}
+
+
+/* NAVBAR */
+
+.navbar{
+
+position:fixed;
+
+top:0;
+
+width:100%;
+
+display:flex;
+
+justify-content:space-between;
+
+padding:15px 40px;
+
+background:rgba(0,0,0,0.5);
+
+backdrop-filter:blur(10px);
+
+}
+
+
+.logo{
+
+font-size:20px;
+
+font-weight:bold;
+
+color:#4CAF50;
+
+}
+
+
+.nav-links a{
+
+color:white;
+
+text-decoration:none;
+
+margin-left:20px;
+
+}
+
+
+
+/* MAIN */
+
+.container{
+
+min-height:100vh;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+flex-direction:column;
+
+text-align:center;
+
+padding-top:60px;
+
+box-sizing:border-box;
+
+}
+
+
+/* CARD */
+
+.result-card{
+
+background:#111a2e;
+
+padding:30px;
+
+border-radius:15px;
+
+display:inline-block;
+
+box-shadow:0 0 20px rgba(0,255,150,0.2);
+
+}
+
+
+
+/* IMAGE */
+
+.result-image{
+
+width:400px;
+
+border-radius:10px;
+
+margin-bottom:20px;
+
+}
+
+
+
+/* STATS */
+
+.stats{
+
+display:flex;
+
+justify-content:center;
+
+gap:30px;
+
+margin-top:20px;
+
+}
+
+
+.stat{
+
+background:#0f1b33;
+
+padding:20px;
+
+border-radius:10px;
+
+width:150px;
+
+}
+
+
+.stat h2{
+
+color:#4CAF50;
+
+margin:0;
+
+}
+
+
+.stat p{
+
+margin:5px;
+
+}
+
+
+
+/* HEALTH */
+
+.health{
+
+margin-top:20px;
+
+font-size:24px;
+
+color:#4CAF50;
+
+}
+
+
+
+/* BUTTONS */
+
+.buttons{
+
+margin-top:30px;
+
+}
+
+
+.btn{
+
+background:#4CAF50;
+
+color:white;
+
+padding:12px 25px;
+
+border-radius:8px;
+
+text-decoration:none;
+
+margin:10px;
+
+display:inline-block;
+
+}
+
+.btn:hover{
+
+background:#45a049;
+
+}
+
+
+</style>
+
+</head>
+
+<body>
+
+
+<div class="navbar">
+
+<div class="logo">
+
+NDVI Monitoring
+
+</div>
+
+
+<div class="nav-links">
+
+<a href="/">Home</a>
+
+<a href="/map">Analyze</a>
+
+<a href="/dashboard">Dashboard</a>
+
+</div>
+
+
+</div>
+
+
+
+<div class="container">
+
+
+
+<h1>NDVI Analysis Result</h1>
+
+
+
+<div class="result-card">
+
+
+<img src="/static/result.png" class="result-image">
+
+
+
+<div class="stats">
+
+
+<div class="stat">
+
+<h2>{{mean}}</h2>
+
+<p>Mean NDVI</p>
+
+</div>
+
+
+
+<div class="stat">
+
+<h2>{{vegetation}}%</h2>
+
+<p>Vegetation</p>
+
+</div>
+
+
+
+</div>
+
+
+
+<div class="health">
+
+{{health}}
+
+</div>
+
+
+
+<div class="buttons">
+
+<a href="/map" class="btn">
+
+Analyze Another Location
+
+</a>
+
+
+
+<a href="/dashboard" class="btn">
+
+View Dashboard
+
+</a>
+
+</div>
+
+
+
+</div>
+
+
+
+</div>
+
+
+</body>
+
+</html>

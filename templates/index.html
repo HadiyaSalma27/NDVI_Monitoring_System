@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>NDVI Calculator</title>
+    </head>
+    <body>
+        <h1>NDVI Calculator</h1>
+        <form  method="POST" enctype="multipart/form-data">
+            Upload Band 4:
+            <input type="file" name="red"><br><br>
+            Upload Band 5:
+            <input type="file" name="nir"><br><br>
+
+            <input type="submit" value="Calculate NDVI">
+        </form>
+
+        {% if result  %}
+
+        <h3>NDVI Result</h2>
+        <img src="{{url_for('static',filename='result.png')}}" width="400">
+        <h4>Statistics</h4>
+        <p>Mean NDVI: {{mean}}</p>
+        <p>Max NDVI: {{max}}</p>
+        <p>Min NDVI: {{min}}</p>
+        <p>Vegetation Coverage:{{vegetation}}%</p>
+        <p>Vegetation Health: {{health}}</p>
+        <a href="{{url_for('static',filename='result.png')}}" download>
+            <button>Download NDVI Image</button>
+        </a>
+
+        {% endif %}
+    </body>
+</html>

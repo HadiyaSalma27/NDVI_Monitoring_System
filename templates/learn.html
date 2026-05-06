@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+
+<title>Learn NDVI</title>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+
+<body class="learn-body">
+
+
+<!-- NAVBAR -->
+
+<div class="navbar">
+
+<div class="logo">
+
+🌿 NDVI Monitoring
+
+</div>
+
+<div class="nav-links">
+
+<a href="/">Home</a>
+
+<a href="/map">Analyze</a>
+
+<a href="/learn" class="active">Learn NDVI</a>
+
+
+</div>
+
+</div>
+
+
+<!-- HERO SECTION -->
+
+<div class="learn-hero">
+
+<h1>Understanding NDVI</h1>
+
+<p>Learn how satellites measure vegetation health from space</p>
+
+</div>
+
+
+
+<!-- CONTENT -->
+
+<div class="learn-container">
+
+
+
+<!-- SECTION 1 -->
+
+<div class="learn-card">
+
+<h2>What is NDVI?</h2>
+
+<p>
+
+NDVI (Normalized Difference Vegetation Index) is a scientific index used to measure vegetation health using satellite imagery.
+
+</p>
+
+<p>
+
+It shows how green and healthy plants are.
+
+</p>
+
+<ul>
+
+<li>High NDVI → Healthy vegetation</li>
+
+<li>Low NDVI → Dry or unhealthy vegetation</li>
+
+<li>Negative NDVI → Water, buildings, snow</li>
+
+</ul>
+
+</div>
+
+
+
+
+<!-- SECTION 2 -->
+
+<div class="learn-card">
+
+<h2>NDVI Formula</h2>
+
+<div class="formula">
+
+NDVI = (NIR − RED) / (NIR + RED)
+
+</div>
+
+<p>
+
+Where:
+
+</p>
+
+<ul>
+
+<li>NIR → Near Infrared light</li>
+
+<li>RED → Red light</li>
+
+</ul>
+
+<p>
+
+Healthy plants reflect more NIR and absorb Red light.
+
+</p>
+
+</div>
+
+
+
+
+<!-- SECTION 3 -->
+
+<div class="learn-card">
+
+<h2>NDVI Value Meaning</h2>
+
+<table>
+
+<tr>
+
+<th>NDVI Value</th>
+
+<th>Meaning</th>
+
+</tr>
+
+<tr>
+
+<td>0.6 to 1.0</td>
+
+<td>Very Healthy Vegetation</td>
+
+</tr>
+
+<tr>
+
+<td>0.4 to 0.6</td>
+
+<td>Healthy Vegetation</td>
+
+</tr>
+
+<tr>
+
+<td>0.2 to 0.4</td>
+
+<td>Moderate Vegetation</td>
+
+</tr>
+
+<tr>
+
+<td>0 to 0.2</td>
+
+<td>Poor Vegetation</td>
+
+</tr>
+
+<tr>
+
+<td>Less than 0</td>
+
+<td>Water / Urban</td>
+
+</tr>
+
+</table>
+
+</div>
+
+
+
+
+<!-- SECTION 4 -->
+
+<div class="learn-card">
+
+<h2>Why NDVI is Important?</h2>
+
+<ul>
+
+<li>Agriculture monitoring</li>
+
+<li>Drought detection</li>
+
+<li>Forest health analysis</li>
+
+<li>Climate change studies</li>
+
+<li>Satellite vegetation monitoring</li>
+
+</ul>
+
+</div>
+
+
+
+
+<!-- SECTION 5 -->
+
+<div class="learn-card">
+
+<h2>Satellite Used</h2>
+
+<p>
+
+This project uses:
+
+</p>
+
+<ul>
+
+<li>Sentinel-2 Satellite</li>
+
+<li>European Space Agency (ESA)</li>
+
+<li>10 meter resolution</li>
+
+</ul>
+
+</div>
+
+
+
+</div>
+
+
+
+</body>
+
+</html>
